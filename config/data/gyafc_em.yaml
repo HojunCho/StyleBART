@@ -1,0 +1,8 @@
+# @package _global_
+data: gyafc_em
+
+train:
+  num_epochs: 10.
+
+model:
+  max_length: 48

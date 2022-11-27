@@ -1,0 +1,14 @@
+# @package _global_
+data: amazon
+
+train:
+  num_epochs: 3.
+
+model:
+  max_length: 48
+  additional_tokens:
+    - num_num
+    - num_extend
+
+evaluate:
+  reference: false

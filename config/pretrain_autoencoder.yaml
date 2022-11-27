@@ -1,0 +1,9 @@
+defaults: 
+  - pretrain
+  - _self_
+
+name: ae
+
+train:
+  threadhold: 0.03
+  lasting: 0

@@ -1,0 +1,8 @@
+# @package _global_
+data: yelp
+
+train:
+  num_epochs: 3.
+
+model:
+  max_length: 64

@@ -1,0 +1,10 @@
+defaults: 
+  - pretrain
+  - _self_
+
+name: cls
+
+train:
+  threadhold: 0.6
+  lasting: 200
+  batch_size: 256

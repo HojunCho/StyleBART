@@ -1,0 +1,40 @@
+defaults:
+  - model: bart-base
+  - data: ???
+  - _self_
+
+seed: 42
+
+name: default
+
+hydra:
+  run:
+    dir: content/main/${data}/${name}
+  job:
+    chdir: True
+
+model:
+  ae: ^/content/pretrain/${data}/ae/dump
+  cls: ^/content/pretrain/${data}/cls/dump
+  lms:
+    - ^/content/pretrain/${data}/lm_0/dump
+    - ^/content/pretrain/${data}/lm_1/dump
+
+train:
+  batch_size: 64
+  learning_rate: 0.00003
+  learning_rate_init: 0.0002
+  grad_clip: 1.
+  num_workers: 4
+  accumulation: 1
+  iteration: 1
+  classifier_iteration: 2
+
+  eval_per_step: 500
+  save_per_step: 500
+
+  factor:
+    self: 0.1
+    cycle: 0.25
+    style: 1.0
+    fluency: 0.05

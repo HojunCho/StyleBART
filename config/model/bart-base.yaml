@@ -1,0 +1,3 @@
+tokenizer: facebook/bart-base
+arch: facebook/bart-base
+pretrained: true

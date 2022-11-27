@@ -1,0 +1,20 @@
+defaults:
+  - model: bart-base
+  - data: ???
+  - _self_
+
+seed: 42
+
+train:
+  batch_size: 64
+  learning_rate: 0.00003
+  learning_rate_init: 0.0002
+  grad_clip: 1.
+  num_workers: 4
+  accumulation: 1
+
+hydra:
+  run:
+    dir: content/pretrain/${data}/${name}
+  job:
+    chdir: True

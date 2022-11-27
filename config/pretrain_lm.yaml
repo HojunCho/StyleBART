@@ -1,0 +1,10 @@
+defaults: 
+  - pretrain
+  - _self_
+
+label: ???
+name: lm_${label}
+
+train:
+  endurance: 3
+  eval_per_step: 500

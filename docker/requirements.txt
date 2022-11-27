@@ -1,0 +1,8 @@
+-f https://download.pytorch.org/whl/cu111/torch_stable.html
+torch==1.10.2+cu111
+transformers==4.19.4
+tensorboard==2.6.0
+tqdm==4.64.0
+hydra-core==1.2
+protobuf<=3.20
+click

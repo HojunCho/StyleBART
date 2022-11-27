@@ -1,0 +1,22 @@
+
+defaults:
+  - model: gpt
+  - _self_
+  - override hydra/job_logging: disabled
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
+
+target: ???
+data: ???
+label: ???
+name: lm_${label}
+
+model:
+  pretrained: content/eval/${data}/${name}/dump
+
+eval:
+  num_workers: 4
+  batch_size: 64

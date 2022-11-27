@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  app:
+    image: hojuncho/style_bart
+    build: 
+      context: .
+    container_name: style_bart_container
+
+    ipc: host
+
+    user: $USER_ID:$GROUP_ID
+
+    volumes:
+      - ..:/app
+      - $HOME:/root
+
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=0
+      - HOME=/root
+    
+    runtime: nvidia

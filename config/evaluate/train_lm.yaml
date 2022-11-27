@@ -1,0 +1,24 @@
+seed: 42 
+
+defaults:
+  - model: gpt
+  - _self_
+
+hydra:
+  run:
+    dir: content/eval/${data}/${name}
+  job:
+    chdir: True
+
+data: ???
+label: ???
+name: lm_${label}
+
+train:
+  num_workers: 4
+  batch_size: 256
+  learning_rate: 0.00003
+  grad_clip: 1.
+  accumulation: 1
+  eval_per_step: 500
+  endurance: 3
