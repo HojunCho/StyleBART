@@ -1,0 +1,7 @@
+__pycache__
+/.venv
+/.vscode
+/backup
+/content
+/data
+/temp
