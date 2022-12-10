@@ -1,5 +1,5 @@
 # StyleBART
-Source codes for `Rethinking Style Transformer with Energy-based Interpretation: Adversarial Unsupervised Style Transfer using a Pretrained Model`, accepted at EMNLP-22
+Source codes for [Rethinking Style Transformer with Energy-based Interpretation: Adversarial Unsupervised Style Transfer using a Pretrained Model](https://preview.aclanthology.org/emnlp-22-ingestion/2022.emnlp-main.366/), accepted at EMNLP-22
 
 ## Environment Setting
 ### Using conda / pip
